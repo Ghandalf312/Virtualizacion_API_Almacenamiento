@@ -4,8 +4,9 @@ Install-Package -Name Google.Apis.Drive.v3
 # Ruta al archivo JSON con las credenciales
 $jsonFilePath = "C:\Users\marti\Desktop\credentials.json"
 
-# Configurar las credenciales (reemplaza con tu lógica para obtener las credenciales)
-# ...
+# Cargar las credenciales desde el archivo JSON
+$credential = New-Object Google.Apis.Auth.OAuth2.GoogleCredential
+$credential = [Google.Apis.Auth.OAuth2.GoogleCredential]::FromFile($jsonFilePath)
 
 # Crear el servicio de Google Drive
 $driveService = New-Object Google.Apis.Drive.v3.DriveService -ArgumentList ($credential)
