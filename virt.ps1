@@ -1,4 +1,4 @@
-# Importar el módulo (asegúrate de que está instalado)
+# Importar el módulo (asegurarse de que está instalado)
 Install-Package -Name Google.Apis.Drive.v3
 
 # Ruta al archivo JSON con las credenciales
